@@ -1,0 +1,26 @@
+
+<div class='table-responsive'>
+    <table class='table' *ngIf='holidaysdata && holidaysdata.length'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <!-- <th>Observed</th>
+                <th>Public</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let holiday of holidaysdata">
+                <td>
+                    <a [routerLink] = "['/holidays', holiday.name]">
+                        {{holiday.name}}
+                    </a>
+                </td>
+                <td>{{holiday.date}}</td>
+                <!-- <td>{{holiday.observed}}</td>
+                <td>{{holiday.public}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+  
